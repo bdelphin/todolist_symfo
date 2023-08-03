@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+
+        <script src="https://kit.fontawesome.com/9453d08fb9.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="{{ asset('assets/css/pico.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+
+        {% block stylesheets %}
+        {% endblock %}
+
+        {% block javascripts %}
+        {% endblock %}
+    </head>
+    <body>
+
+        <header class="container">
+            <nav>
+                
+                <ul>
+                    <li><strong>ToDo</strong></li>
+                </ul>
+                <ul>
+                    {% block nav %}
+                    {% endblock %}
+                </ul>
+            </nav>
+        </header>
+
+        <hr>
+
+        <main class="container">
+            {% block body %}{% endblock %}
+        </main>
+
+        <footer class="container">
+            bdelphin 2023            
+        </footer>
+    </body>
+</html>
+

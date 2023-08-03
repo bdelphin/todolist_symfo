@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New project - ToDo
+{% endblock %}
+
+{% block nav %}
+	<li>
+		<a href="{{ path('home') }}">Tasks</a>
+	</li>
+	<li>
+		<a href="{{ path('projects_add') }}" role="button">Ajouter projet</a>
+	</li>
+{% endblock %}
+
+{% block body %}
+
+	<ul>
+		{% for project in projects %}
+			<li>{{ project.name }}</li>
+        {% else %}
+        <li><em>Aucun projet trouvé !</em></li>
+		{% endfor %}
+	</ul>
+
+{% endblock %}

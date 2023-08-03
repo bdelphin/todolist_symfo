@@ -1,0 +1,115 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MainController!
+{% endblock %}
+
+{% block nav %}
+	<li>
+		<a href="{{ path('projects_list') }}">Projets</a>
+	</li>
+	<li>
+		<a href="#" role="button">Ajouter tâche</a>
+	</li>
+{% endblock %}
+
+{% block body %}
+
+	<details open>
+		<summary>Courses</summary>
+		<ul>
+			<li>
+				<div class="task__left">
+					<div><input type="checkbox" name="task1" id="task1"></div>
+					<div>
+						<label for="task1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, esse.</label>
+					</div>
+				</div>
+				<div class="task__actions">
+					<i class="fa-solid fa-trash"></i>
+				</div>
+			</li>
+
+			<li>
+				<div class="task__left">
+					<div><input type="checkbox" name="task2" id="task2"></div>
+					<div>
+						<label for="task2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, esse.</label>
+					</div>
+				</div>
+				<div class="task__actions">
+					<i class="fa-solid fa-trash"></i>
+				</div>
+			</li>
+
+			<li>
+				<div class="task__left">
+					<div><input type="checkbox" name="task3" id="task3"></div>
+					<div>
+						<label for="task3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, esse.</label>
+					</div>
+				</div>
+				<div class="task__actions">
+					<i class="fa-solid fa-trash"></i>
+				</div>
+			</li>
+		</ul>
+	</details>
+
+	<details open>
+		<summary>Travaux
+			<small>(3 tâches restantes)</small>
+		</summary>
+		<ul>
+			<li>
+				<div class="task__left">
+					<div><input type="checkbox" name="task4" id="task4"></div>
+					<div>
+						<label for="task4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, esse.</label>
+					</div>
+				</div>
+				<div class="task__actions">
+					<i class="fa-solid fa-trash"></i>
+				</div>
+			</li>
+
+			<li>
+				<div class="task__left">
+					<div><input type="checkbox" name="task5" id="task5"></div>
+					<div>
+						<label for="task5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, esse.</label>
+					</div>
+				</div>
+				<div class="task__actions">
+					<i class="fa-solid fa-trash"></i>
+				</div>
+			</li>
+
+			<li>
+				<div class="task__left">
+					<div><input type="checkbox" name="task6" id="task6"></div>
+					<div>
+						<label for="task6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, esse.</label>
+					</div>
+				</div>
+				<div class="task__actions">
+					<i class="fa-solid fa-trash"></i>
+				</div>
+			</li>
+		</ul>
+	</details>
+
+	<nav>
+		<ul>
+			<li></li>
+		</ul>
+		<ul>
+			<li>Filtres :
+			</li>
+			<li><input type="checkbox" name="ended_checkbox" id="ended_checkbox"><label for="ended_checkbox">Tâches terminées</label>
+			</li>
+			<li><input type="checkbox" name="ended_checkbox" id="ended_checkbox"><label for="ended_checkbox">Projets terminées</label>
+			</li>
+		</ul>
+	</nav>
+
+{% endblock %}

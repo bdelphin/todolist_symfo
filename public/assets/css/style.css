@@ -1,0 +1,49 @@
+.container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+main li {
+    display: flex;
+    list-style-type: none !important;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task__left {
+    /* white-space: nowrap; */
+    /* overflow: hidden; */
+    /* max-width: 80%; */
+    display: flex;
+    align-items: center;
+}
+
+.task__left input {
+    vertical-align: sub;
+    margin-right: 15px;
+}
+
+.task__actions i {
+    vertical-align: baseline;
+    color: gray;
+}
+
+.task__actions i:hover {
+    color: white;
+    cursor: pointer;
+}
+
+details[open] {
+    padding-bottom: 0;
+}
+
+footer {
+    /* position: fixed;
+    bottom: 0;
+    left: 0; */
+}
+
+small {
+    margin-left: 10px;
+    font-size: 0.6em;
+}
