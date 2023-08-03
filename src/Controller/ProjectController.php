@@ -33,10 +33,10 @@ class ProjectController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             // $form->getData() holds the submitted values
             // but, the original `$task` variable has also been updated
-            $task = $form->getData();
+            $project = $form->getData();
 
             // ... perform some action, such as saving the task to the database
-            $entityManager->persist($task);
+            $entityManager->persist($project);
             $entityManager->flush();
 
             return $this->redirectToRoute('projects_list');

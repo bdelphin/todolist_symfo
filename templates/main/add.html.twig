@@ -1,14 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New project - ToDo
+{% block title %}New task - ToDo
 {% endblock %}
 
 {% block nav %}
 	<li>
-		<a href="{{ path('home') }}">Tasks</a>
+		<a href="{{ path('projects_list') }}">Projets</a>
 	</li>
 	<li>
-		<a href="{{ path('projects_list') }}">Projets</a>
+		<a href="{{ path('home') }}">Tasks</a>
 	</li>
 {% endblock %}
 

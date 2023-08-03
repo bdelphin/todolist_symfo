@@ -8,11 +8,43 @@
 		<a href="{{ path('projects_list') }}">Projets</a>
 	</li>
 	<li>
-		<a href="#" role="button">Ajouter tâche</a>
+		<a href="{{ path('tasks_add') }}" role="button">Ajouter tâche</a>
 	</li>
 {% endblock %}
 
+{% block javascripts %}
+<script src="{{ asset('assets/js/app.js') }}"></script>
+{% endblock %}
+
 {% block body %}
+
+	{% for project in projects %}
+		<details open>
+			<summary>{{ project.name }}
+				<small>({{ project.tasks|length }}
+					tâches restantes)</small>
+			</summary>
+			<ul>
+				{% for task in project.tasks %}
+					<li>
+						<div class="task__left">
+							<div><input type="checkbox" class="task__checkbox" name="task__{{ task.id }}" id="task__{{ task.id }}" {{ (task.done) ? 'checked' : '' }}></div>
+							<div>
+								<label for="task__{{ task.id }}" class="{{ (task.done) ? 'strike' : '' }}">{{ task.title }}</label>
+							</div>
+						</div>
+						<div class="task__actions">
+							<i class="fa-solid fa-trash"></i>
+						</div>
+					</li>
+				{% else %}
+					<em>Aucune tâche dans ce projet.</em>
+				{% endfor %}
+			</ul>
+		</details>
+	{% else %}
+		<em>Aucun projet trouvé !</em>
+	{% endfor %}
 
 	<details open>
 		<summary>Courses</summary>
